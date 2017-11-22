@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Eruda-memory</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var list = [];
+        setInterval(function () 
+        {
+            for (var i = 0; i < 100000; i++) 
+            {
+                list[i] = new Date();
+            }
+        }, 6000);
+        setInterval(function () 
+        {
+            list = [];
+        }, 2000);
+    </script>
+    <script src="node_modules/eruda/eruda.js"></script>
+    <script>eruda.init();</script>
+    <script src="eruda-memory.js"></script>
+    <script>
+        eruda.add(erudaMemory).show('memory').show();
+    </script>
+</body>
+</html>
