@@ -6,7 +6,7 @@
   "scripts": {
     "build": "uglifyjs eruda-memory.js -o eruda-memory.min.js --mangle",
     "lint": "eslint eruda-memory.js",
-    "ci": "npm run build && npm run ci",
+    "ci": "npm run build && npm run lint",
     "dev": "nws -p 3000"
   },
   "repository": {

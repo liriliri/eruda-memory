@@ -128,7 +128,7 @@
             },
             _initCfg: function (container)
             {
-                var cfg = this.config = config.create('eruda-fps', {
+                var cfg = this.config = config.create('eruda-memory', {
                     alwaysActivated: true
                 });
 
@@ -146,7 +146,7 @@
 
                 var settings = container.get('settings');
 
-                settings.text('Fps')
+                settings.text('Memory')
                     .switch(cfg, 'alwaysActivated', 'Always Activated')
                     .separator();
             },
@@ -161,7 +161,6 @@
                 if (time > prevTime + 1000)
                 {
                     var memory = performance.memory;
-                    console.log(memory.usedJSHeapSize);
 					this._draw(memory.usedJSHeapSize / 1048576, memory.totalJSHeapSize / 1048576);
                     this._prevTime = time;
                     this._frames = 0;
