@@ -40,9 +40,10 @@
                 this.callSuper(Tool, 'init', arguments);
 
                 this._style = util.evalCss([
-                    '.eruda-memory {padding: 10px !important;}',
-                    'canvas {width: 100%; border-radius: 4px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 4px 0 rgba(0, 0, 0, 0.08), 0 3px 1px -2px rgba(0, 0, 0, 0.2);}'
-                ].join('.eruda-memory '));
+                    '.eruda-dev-tools .eruda-tools .eruda-memory {padding: 10px !important;}',
+                    'canvas {width: 100%; border-radius: 4px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 4px 0 rgba(0, 0, 0, 0.08), 0 3px 1px -2px rgba(0, 0, 0, 0.2);}',
+                    '.eruda-not-supported {background: #f44336; color: #fff; padding: 10px; border-radius: 4px; text-align: center; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2)}'
+                ].join('.eruda-dev-tools .eruda-tools .eruda-memory '));
                 this._isRunning = false;
                 this._beginTime = util.now();
                 this._prevTime = this._beginTime;
@@ -74,6 +75,12 @@
             },
             _start: function ()
             {
+                var memory = performance.memory;
+                if (!memory) {
+                    this._$el.html('<div class="eruda-not-supported">Not supported for this browser!</div>');
+                    return;
+                }
+
                 if (this._isRunning) return;
 
                 var self = this;
