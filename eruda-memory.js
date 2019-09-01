@@ -29,8 +29,8 @@
             NAME = 'MB';
 
         var util = eruda.util,
+            Settings = eruda.Settings,
             round = Math.round,
-            config = eruda.config,
             Tool = eruda.Tool;
 
         var Memory = Tool.extend({
@@ -135,7 +135,7 @@
             },
             _initCfg: function (container)
             {
-                var cfg = this.config = config.create('eruda-memory', {
+                var cfg = this.config = Settings.createCfg('eruda-memory', {
                     alwaysActivated: true
                 });
 

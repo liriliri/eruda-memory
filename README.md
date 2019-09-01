@@ -15,7 +15,7 @@ Eruda plugin for displaying memory.
 ## Demo
 
 Browse it on your phone: 
-[http://eruda.liriliri.io/](http://eruda.liriliri.io/)
+[http://eruda.liriliri.io/?plugin=memory](http://eruda.liriliri.io/?plugin=memory)
 
 ## Install
 
