@@ -1,6 +1,6 @@
 {
   "name": "eruda-memory",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Eruda plugin for displaying memory",
   "main": "eruda-memory.js",
   "scripts": {
@@ -26,10 +26,11 @@
   },
   "homepage": "https://github.com/liriliri/eruda-memory#readme",
   "devDependencies": {
-    "eruda": "^1.5.8",
-    "eslint": "^4.11.0",
-    "eslint-config-prettier": "^6.1.0",
+    "eruda": "^2.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
     "nws": "^1.1.1",
-    "uglify-js": "^3.1.10"
+    "prettier": "^1.19.1",
+    "uglify-js": "^3.7.3"
   }
 }
