@@ -1,6 +1,6 @@
 // Modified from https://github.com/mrdoob/stats.js/
 
-;(function(root, factory) {
+;(function(root, factory) { /* eslint-disable-line */
   if (typeof define === 'function' && define.amd) {
     define([], factory)
   } else if (typeof module === 'object' && module.exports) {
